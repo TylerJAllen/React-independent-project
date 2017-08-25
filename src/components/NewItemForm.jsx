@@ -12,11 +12,8 @@ class NewItemForm extends React.Component{
 
   handleNewItemFormSubmission(event) {
     event.preventDefault();
-    const {_title, _note} = this.refs;
-    console.log(this.textInput.value);
-    console.log(this.textareaInput.value);
+    // const {_title, _note} = this.refs;
     var newItem = new Item(this.textInput.value, this.textareaInput.value);
-    console.log(newItem);
     this.props.onNewItemCreation(newItem);
     this.props.hideFormAfterSubmission();
   }
