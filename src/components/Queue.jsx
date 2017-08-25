@@ -22,8 +22,8 @@ class Queue extends React.Component{
   render(){
     return (
       <div className={styles}>
-        <ItemList itemList={this.state.masterItemList}/>
         <NewItemControl onNewItemCreation= {this.addNewItemToList}/>
+        <ItemList itemList={this.state.masterItemList}/>
       </div>
     );
   }
