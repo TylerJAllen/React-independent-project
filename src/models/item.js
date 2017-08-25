@@ -1,6 +1,6 @@
 class Item {
-  constructor(titles, note) {
-    this.titles = titles;
+  constructor(title, note) {
+    this.title = title;
     this.note = note;
   }
 }
