@@ -7,12 +7,19 @@ import PropTypes from 'prop-types';
 function ItemList(props){
   return (
     <div>
-      <Item />
+      <hr/>
+      {props.itemList.map((item, index) =>
+        <Item title={item.title}
+          note={item.note}
+          key={index}
+          />
+      )}
     </div>
   );
 }
 
 ItemList.propTypes = {
+  itemList: PropTypes.array
 };
 
 export default ItemList;
