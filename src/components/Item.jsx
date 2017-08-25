@@ -6,11 +6,15 @@ import PropTypes from 'prop-types';
 function Item(props){
   return (
     <div>
+      <h3>{props.title}</h3>
+      <p>{props.note}</p>
     </div>
   );
 }
 
 Item.propTypes = {
+  title: PropTypes.string.isRequired,
+  note: PropTypes.string.isRequired
 };
 
 export default Item;
