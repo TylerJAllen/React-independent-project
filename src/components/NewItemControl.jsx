@@ -57,6 +57,7 @@ class NewItemControl extends React.Component{
 }
 
 NewItemControl.propTypes = {
+  onNewItemCreation: PropTypes.func
 };
 
 export default NewItemControl;

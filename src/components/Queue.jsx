@@ -9,13 +9,21 @@ class Queue extends React.Component{
     this.state={
       masterItemList: []
     };
+    this.addNewItemToList = this.addNewItemToList.bind(this);
   }
+
+  addNewItemToList(newItem){
+   let newMasterItemList = this.state.masterItemList.slice();
+   newMasterItemList.push(newItem);
+   this.setState({masterItemList: newMasterItemList});
+   console.log(this.state.masterItemList);
+ }
 
   render(){
     return (
       <div className={styles}>
         <ItemList />
-        <NewItemControl />
+        <NewItemControl onNewItemCreation= {this.addNewItemToList}/>
       </div>
     );
   }
