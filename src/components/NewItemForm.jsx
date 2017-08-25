@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 function NewItemForm(props){
   return (
     <div>
-      
+      <h1>New Item Form</h1>
     </div>
   );
 }
