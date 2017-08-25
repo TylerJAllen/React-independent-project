@@ -12,8 +12,8 @@ class NewItemForm extends React.Component{
 
   handleNewItemFormSubmission(event) {
     event.preventDefault();
-    // const {_title, _note} = this.refs;
-    var newItem = new Item(this.textInput.value, this.textareaInput.value);
+    // const {_title, _note, _duration} = this.refs;
+    var newItem = new Item(this.textInput.value, this.textareaInput.value, this.durationInput.value);
     this.props.onNewItemCreation(newItem);
     this.props.hideFormAfterSubmission();
   }
@@ -35,6 +35,14 @@ class NewItemForm extends React.Component{
             <FormControl componentClass="textarea" placeholder="Notes"
             inputRef={ref => { this.textareaInput = ref; }}
             />
+          </FormGroup>
+          <FormGroup controlId="formControlsText">
+            <ControlLabel>How often do you want this event to take place? <em>(enter # of days)</em></ControlLabel>
+            <FormControl
+              id="formControlsText"
+              type="number"
+              inputRef={ref => { this.durationInput = ref; }}
+              />
           </FormGroup>
           <Button type="submit">Submit</Button>
         </form>

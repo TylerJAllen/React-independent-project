@@ -32,7 +32,6 @@ class NewItemControl extends React.Component{
     return (
       <div>
         <Button
-          block
           bsStyle="info"
           bsSize="large"
           onClick={this.showFormModal}>

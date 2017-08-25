@@ -11,6 +11,7 @@ function ItemList(props){
       {props.itemList.map((item, index) =>
         <Item title={item.title}
           note={item.note}
+          duration={item.duration}
           key={index}
           />
       )}

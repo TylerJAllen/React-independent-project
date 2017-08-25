@@ -9,10 +9,17 @@ function Item(props){
     <div>
       <h3>{props.title}</h3>
       <p>{props.note}</p>
+      <h3>{props.duration}</h3>
       <ButtonGroup>
-        <Button>Reset</Button>
-        <Button>Edit</Button>
-        <Button>Remove</Button>
+        <Button bsStyle="success"
+          bsSize="xsmall">
+          Reset</Button>
+        <Button bsStyle="warning"
+          bsSize="xsmall">
+          Edit</Button>
+        <Button bsStyle="danger"
+          bsSize="xsmall">
+          Remove</Button>
       </ButtonGroup>
     </div>
   );
@@ -20,7 +27,8 @@ function Item(props){
 
 Item.propTypes = {
   title: PropTypes.string.isRequired,
-  note: PropTypes.string.isRequired
+  note: PropTypes.string.isRequired,
+  duration: PropTypes.string.isRequired
 };
 
 export default Item;
