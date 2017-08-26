@@ -12,6 +12,7 @@ function ItemList(props){
         <Item title={item.title}
           note={item.note}
           duration={item.duration}
+          timeRemaining={item.timeRemaining}
           key={index}
           />
       )}

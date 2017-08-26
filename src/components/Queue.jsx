@@ -20,17 +20,21 @@ class Queue extends React.Component{
    );
  }
 
+ componentWillUnmount(){
+   clearInterval(this.timeSinceRemainingChecker);
+ }
+
   addNewItemToList(newItem){
    let newMasterItemList = this.state.masterItemList.slice();
    newMasterItemList.push(newItem);
    this.setState({masterItemList: newMasterItemList});
-   console.log(this.state.masterItemList);
  }
+
 
  updateItemTimeRemaining() {
    let newMasterItemList = this.state.masterItemList.slice();
    newMasterItemList.forEach((item) =>
-     item.setTimeRemaining()
+    item.setTimeRemaining()
    );
    this.setState({masterItemList:newMasterItemList})
  }

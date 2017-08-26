@@ -4,13 +4,14 @@ class Item {
   constructor(title, note, duration) {
     this.title = title;
     this.note = note;
-    this.duration = duration;
+    this.duration = parseInt(duration);
     this.timeStarted = new Moment();
-    this.timeRemaining = duration;
+    this.timeRemaining = parseInt(duration);
   }
   setTimeRemaining() {
-    console.log(this.duration);
-    this.timeRemaining = this.timeStarted.add(this.duration, 'day');
+    var deadline = this.timeStarted.add(this.duration, 'seconds');
+    this.timeRemaining = deadline.subtract(deadline);
+    console.log(this.timeRemaining._d);
   }
 }
 

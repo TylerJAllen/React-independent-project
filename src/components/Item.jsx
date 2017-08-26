@@ -9,7 +9,8 @@ function Item(props){
     <div>
       <h3>{props.title}</h3>
       <p>{props.note}</p>
-      <h3>{props.duration}</h3>
+      <p>Duration Interval: {props.duration}</p>
+      <p>{props.timeRemaining}</p>
       <ButtonGroup>
         <Button bsStyle="success"
           bsSize="xsmall">
@@ -28,7 +29,8 @@ function Item(props){
 Item.propTypes = {
   title: PropTypes.string.isRequired,
   note: PropTypes.string.isRequired,
-  duration: PropTypes.string.isRequired
+  duration: PropTypes.number.isRequired,
+  timeRemaining: PropTypes.string.isRequired
 };
 
 export default Item;
